@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My WHY for Web Development"
-date:       2018-01-12 13:07:03 -0500
+date:       2018-01-19 17:00:18 -0500
 permalink:  my_why_for_web_development
 ---
 
