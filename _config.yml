@@ -1,0 +1,21 @@
+# Site settings
+title: The Neu Dev
+header-img: img/home-bg.png
+email: allisontzadok@gmail.com
+copyright_name: AlliTzadok
+description: > # this means to ignore newlines until "baseurl:"
+  a place for my dev journey and creations
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: theneumama
+github_username:  AlliTzadok
+learn_profile: AlliTzadok
+email_username: allisontzadok@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
