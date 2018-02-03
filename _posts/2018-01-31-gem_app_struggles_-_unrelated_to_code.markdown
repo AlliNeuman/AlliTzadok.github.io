@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Gem App struggles - Unrelated to Code"
-date:       2018-01-31 17:23:22 +0000
+date:       2018-01-31 12:23:23 -0500
 permalink:  gem_app_struggles_-_unrelated_to_code
 ---
 
