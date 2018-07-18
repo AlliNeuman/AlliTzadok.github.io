@@ -31,23 +31,26 @@ It is best practice to declare your variables first, and use later. In terms of 
 ### How hoisting affects functions
 Hoisting only occurs for function declarations, not function expressions.  Here are some examples of what may happen, and the errors or outputs we may get after calling functions.
 
-```hoistedFunction();
+```
+hoistedFunction();
 
 function hoistedFunction() {
 console.log("This function is hoisted and would output this sentence, because it's a function declaration and not an expression")
-}```
+}
 
-```hoistedTypeErrorFunction();
+hoistedTypeErrorFunction();
 var typeErrorFunction = function() {
 console.log("This function is not hoisted and will throw a TypeError beecause the function is a function expression. The variable is hoisted, but the function definition is not defined ie. will throw the TypeError.")
-}```
+}
+```
 
 How do these function declarations differ from a named function expression?
 
  A functions name doesn't get hoisted if it's part of a function expression. If you call a function before it is declared, it will return not defined. If you call a named function expression it will return the TypeError for undefined is not a function.
  
  ex:
- ```
+
+```
 refErrorFunction();
  
 namedFunctionExpression(); 
@@ -58,7 +61,7 @@ namedFunctionExpression();
  ```
  In the above code, calling refErrorFunction() will throw a reference error because refErrorFunction is not defined yet.  namedFunctionExpression will also throw an error, but a TypeError because although it returns undefined, undefined is not a function.
  
- ### Scope of var, let and const
+### Scope of var, let and const
 
 **Var declarations** are processed before any code is executed (hoisting). The scope of var is either the current scope, or for variables declared outside of the function, it would be global scope. If a varaible is not declared, it is always global scope.  Variables declared using var can be redefined within later code.
 
@@ -68,9 +71,9 @@ If a variable has a function scope, it can only be accessed within that function
           var x = 5;
 		}
 					
-					console.log(x)
-					```
-The bove code will throw a ReferenceError because x is defined within doSomething and not outside the function.
+console.log(x)
+```
+The above code will throw a ReferenceError because x is defined within doSomething and not outside the function.
 
 **Let declarations** for varibles limit the scope to the block, function, statement, or expression of code in which the declaration happens.  The scope also includes any sub-blocks for where the variables declared by ```let``` are declared.
 
