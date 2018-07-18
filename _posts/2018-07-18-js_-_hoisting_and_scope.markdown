@@ -67,10 +67,10 @@ namedFunctionExpression();
 
 If a variable has a function scope, it can only be accessed within that function.   You would have to call on the particular function in order to have access to that variable.  If the variable is not being returned though, there is no direct access to it. 
 
-```function doSomething() {
-          var x = 5;
-		}
-					
+```
+function doSomething() {
+var x = 5;
+}					
 console.log(x)
 ```
 The above code will throw a ReferenceError because x is defined within doSomething and not outside the function.
