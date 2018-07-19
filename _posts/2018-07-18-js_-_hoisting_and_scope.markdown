@@ -14,7 +14,7 @@ console.log(foo);
 var foo;
 foo = 3;
 ```
-Since declarations are stored in memory, they can be accessed, but the value would be undefined. In the example above, console.log would return an undefined because var foo was defined after foo was initialized.  If we moved console.log after the declaration then we would get 3 in console.
+Since declarations are stored in memory, they can be accessed, but the value would be undefined. In the example above, console.log would return an undefined because var foo was defined after foo was initialized.  If we moved console.log after the declaration and assignment, then we would get 3 in console after it is been initialized.
 
 ### var, let and const - what's the deal?
 Declarations using var keyword declaration is hoisted. In terms of scope, var's scope is the entire function, whereas let and constant's scope are only the enclosing block of curly braces.  Since ```var``` scope is the entire function, you can access the variable before it is declared, although it will return undefined. On the other hand, ```let``` and ```const``` will through a reference error saying the variable has not been defined.  Both ```let``` and ```const``` cannot be used until they have been declared.
@@ -26,7 +26,7 @@ foo = 3;
 ```
 This will throw an Uncaught Reference Error "foo is not defined". This is because the declaration does not happen until the actual line where it is declared and initialized.
 
-It is best practice to declare your variables first, and use later. In terms of scope aspect, ```var``` becomes a global variable, which can cause problems with variable assignment.  With es6, ```let``` and ```const``` are better options, but ```const``` is the most preferred and is the most 'safe' because the variable cannot be reassigned.
+It is best practice to declare your variables first, and use later.  Unexpected errors can occur if you declare and assign a variable after initialization such as variables being undefined, or having TypeError issues. In terms of scope aspect, ```var``` becomes a global variable, which can cause problems with variable assignment.  With es6, ```let``` and ```const``` are better options, but ```const``` is the most preferred and is the most 'safe' because the variable cannot be reassigned.
 
 ### How hoisting affects functions
 Hoisting only occurs for function declarations, not function expressions.  Here are some examples of what may happen, and the errors or outputs we may get after calling functions.
